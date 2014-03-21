@@ -1,0 +1,38 @@
+{
+	"name": "inject-video",
+	"title": "Inject Video",
+	"description": "Switch out static video poster with video.",
+	"keywords": [
+		"jquery",
+		"performance",
+    "video",
+    "responsive",
+    "rwd",
+		"plugins"
+	],
+	"version": ".10",
+	"author": {
+		"name": "Nathan Kleekamp",
+		"email": "nkleekamp@gmail.com",
+		"url": "https://github.com/rubric77"
+	},
+	"maintainers": [
+		{
+      "name": "Nathan Kleekamp",
+      "email": "nkleekamp@gmail.com",
+      "url": "https://github.com/rubric77"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/MIT"
+		}
+	],
+  "bugs": "https://github.com/rubric77/inject-video/issues",
+  "docs": "https://github.com/rubric77/inject-video#readme",
+  "download": "https://github.com/rubric77/inject-video/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.11.0"
+	}
+}
