@@ -1,23 +1,19 @@
 {
-  "name": "jquery-boilerplate",
-  "title": "jQuery Boilerplate",
-  "description": "A jump-start for jQuery plugins development.",
-  "author": "Zeno Rocha",
+  "name": "inject-video",
+  "title": "Inject Video",
+  "description": "jQuery plugin that replaces a video poster image with YouTube video.",
+  "author": "Nathan Kleekamp",
   "repository": {
     "type": "git",
-    "url": "http://github.com/jquery-boilerplate/jquery-boilerplate.git"
+    "url": "https://github.com/rubric77/inject-video.git"
   },
-  "homepage": "https://github.com/jquery-boilerplate/jquery-boilerplate/",
-  "version": "3.3.3",
+  "homepage": "https://github.com/rubric77/inject-video/",
+  "version": "0.10",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-cli": "~0.1.13",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.3.2",
-    "grunt-contrib-coffee": "~0.9.0"
-  },
-  "scripts": {
-    "test": "grunt travis --verbose"
+    "grunt-contrib-uglify": "~0.3.2"
   }
 }

@@ -1,7 +1,7 @@
 {
 	"name": "inject-video",
 	"title": "Inject Video",
-	"description": "Switch out static video poster with video.",
+	"description": "jQuery plugin that replaces a video poster image with YouTube video.",
 	"keywords": [
 		"jquery",
 		"performance",
