@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 		// Minify definitions
 		uglify: {
 			my_target: {
-				src: ["dist/jquery.inject-video.js"],
+				src: ["src/jquery.inject-video.js"],
 				dest: "dist/jquery.inject-video.min.js"
 			},
 			options: {
@@ -44,13 +44,23 @@ module.exports = function(grunt) {
 			}
 		},
 
+    // CSS Minify definitions
+    cssmin: {
+      minify: {
+        expand: true,
+        cwd: "src/",
+        src: ["*.css"],
+        dest: "dist/css/",
+        ext: ".min.css"
+      }
+    }
+
 	});
 
 	grunt.loadNpmTasks("grunt-contrib-concat");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.loadNpmTasks("grunt-contrib-cssmin");
 
-	grunt.registerTask("default", ["jshint", "concat", "uglify"]);
-	grunt.registerTask("travis", ["jshint"]);
-
+	grunt.registerTask("default", ["jshint", "concat", "uglify", "cssmin"]);
 };

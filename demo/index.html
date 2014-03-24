@@ -2,17 +2,20 @@
 <html>
 	<head>
 		<title>Inject Video</title>
+    <link rel="stylesheet" href="../src/styles.css" type="text/css" />
 	</head>
 	<body>
-		<div id="element"></div>
+    <div class="media-container ratio-16-9" data="C175zW8-6j8">
+      <div class="play">
+        <span class="play-button"></span>
+      </div>
+    </div>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="../src/inject-video.boilerplate.js"></script>
+		<script src="../src/jquery.inject-video.js"></script>
 		<script>
-			$(function() {
-				$("#element").defaultPluginName({
-					propertyName: "a custom value"
-				});
-			});
+      (function () {
+        $('.media-container').injectVideo();
+      })();
 		</script>
 	</body>
 </html>
