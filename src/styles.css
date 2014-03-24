@@ -1,0 +1,49 @@
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+.media-container {
+  position: relative;
+}
+
+.media-container iframe,
+.media-container img,
+.play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.play {
+  background-color: rgba(0,0,0,.7);
+}
+
+.play-button {
+  /* @todo: include .png too */
+  background-image: url("img/play-button.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100px 100px;
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -52px;
+}
+
+.ratio-16-9 {
+  padding-bottom: 56.25%;
+}
+
+.ratio-4-3 {
+  padding-bottom:75%;
+}
+
+.ratio-1-1 {
+  padding-bottom:100%;
+}
