@@ -7,7 +7,7 @@ jQuery plugin that replaces a placeholder image with embeded YouTube video.
 ### Markup
 
 ```html
-    <div class="media-container ratio-16-9" data-video-id="C175zW8-6j8" data-placeholder-alt="MapGive: Drawing Our Resources Together video still" tabindex="0">
+<div class="media-container ratio-16-9" data-video-id="C175zW8-6j8" data-placeholder-alt="MapGive: Drawing Our Resources Together video still" tabindex="0">
   <div class="play">
     <span class="play-button"></span>
   </div>
