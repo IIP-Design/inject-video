@@ -26,20 +26,43 @@
 		Plugin.prototype = {
 				init: function () {
             this.$videos = $(this.element);
+            this.keys = {
+                space: 32,
+                enter: 13
+            };
             this.loadPoster();
             this.bindUiActions();
 				},
 
         bindUiActions: function () {
             this.click();
+            this.keyDown();
         },
 
         click: function () {
             var _this = this;
 
-            _this.$videos.
-                on('click', function () {
-                    _this.loadVideo( $(this) );
+            _this.$videos.on('click', function () {
+                _this.loadVideo( $(this) );
+            });
+        },
+
+        keyDown: function () {
+            var _this = this;
+
+            _this.$videos.on('keydown', function (e) {
+                var $this = $(this);
+
+                switch (true) {
+                    case (e.which === _this.keys.space):
+                        e.preventDefault();
+                        _this.loadVideo( $(this) );
+                        break;
+                    case (e.which === _this.keys.enter):
+                        e.preventDefault();
+                        _this.loadVideo( $(this) );
+                        break;
+                }
             });
         },
 
@@ -49,9 +72,11 @@
             _this.$videos.each(function (i) {
                 var baseUrl = 'http://img.youtube.com/vi/',
                     videoId = $(this).attr('data-video-id'),
+                    altText = $(this).attr('data-placeholder-alt'),
                     url = baseUrl + videoId + '/' + _this.settings.thumbQuality,
                     code = $('<img>', {
-                        'src': url
+                        'src': url,
+                        'alt': altText
                     });
 
                 $(this).prepend(code);

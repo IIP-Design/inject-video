@@ -21,9 +21,18 @@
   background-color: rgba(0,0,0,.7);
 }
 
+.lt-ie9 .play {
+  background-color: #000000;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+
+.lt-ie8 .play {
+  background-color: #000000;
+  filter: alpha(opacity=70);
+}
+
 .play-button {
-  /* @todo: include .png too */
-  background-image: url("img/play-button.svg");
+  background-image: url("/src/img/play-button.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100px 100px;
@@ -36,14 +45,18 @@
   margin: -52px;
 }
 
+.lt-ie9 .play-button {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.lt-ie8 .play-button {
+  filter: alpha(opacity=100);
+}
+
 .ratio-16-9 {
   padding-bottom: 56.25%;
 }
 
 .ratio-4-3 {
   padding-bottom:75%;
-}
-
-.ratio-1-1 {
-  padding-bottom:100%;
 }
