@@ -1,24 +1,62 @@
 # Inject Video
 
-jQuery plugin that replaces a placeholder image with YouTube video.
-
+jQuery plugin that replaces a placeholder image with embeded YouTube video.
 
 ## Instructions
 
-YouTube autogenerates thumbnails for a given video, which you can access
-via the following url: `http://img.youtube.com/vi/<video id>/<thumbnail quality>`
+### Markup
 
-The video ID is everything after the "=" in a video's URL. For example,
-given the following URL: http://www.youtube.com/watch?v=C175zW8-6j8, the
-video ID would be `C175zW8-6j8`.
+```html
+<div class="media-container ratio-16-9" data-video-id="C175zW8-6j8">
+  <div class="play">
+    <span class="play-button"></span>
+  </div>
+</div>
+'''
 
-Thumbnail quality options:
+Before the closing `</body>` tag, include a link to jQuery and the plugin, and instantiate it.
 
-* default.jpg (aspect ratio: 4x3),
-* sddefault.jpg (aspect ratio: 4x3),
+```html
+...
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="../src/jquery.inject-video.js"></script>
+		<script>
+      (function () {
+        $('.media-container').injectVideo();
+      })();
+		</script>
+	</body>
+'''
+
+### Plugin Options
+
+To overwrite the plugin defaults, pass a JS object at instantiation, like so:
+
+```javascript
+(function () {
+  $('.media-container').injectVideo({
+    thumbQuality: 'default.jpg',
+    parameters: {autohide: 0, autoplay: 0}
+  });
+})();
+```
+
+`thumbQuality` options:
+
+* default.jpg (aspect ratio: 4:3),
+* sddefault.jpg (aspect ratio: 4:3),
 * mqdefault.jpg (aspect ratio: 16:9),
-* hqdefault.jpg (aspect ratio: 4x3),
+* hqdefault.jpg (aspect ratio: 4:3),
 * maxresdefault.jpg (aspect ratio: 16:9)
+
+**Note**: When choosing a thumbnail different than the plugin's default, for
+example one with a 4:3 aspect ratio, you will have to swap out the class `ratio-16-9` for `ratio-4-3` in your markup.
+
+`parameters` options:
+
+You can pass a Javascript object with any of the YouTube Embedded Player
+parameters found here: https://developers.google.com/youtube/player_parameters#Parameters
 
 
 ## Browser Support

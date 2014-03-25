@@ -11,7 +11,7 @@
 
 				defaults = {
             thumbQuality: 'mqdefault.jpg',
-            parameters: {}
+            parameters: {autoplay: 1}
 		};
 
 		// The actual plugin constructor
@@ -48,7 +48,7 @@
 
             _this.$videos.each(function (i) {
                 var baseUrl = 'http://img.youtube.com/vi/',
-                    videoId = $(this).attr('data'),
+                    videoId = $(this).attr('data-video-id'),
                     url = baseUrl + videoId + '/' + _this.settings.thumbQuality,
                     code = $('<img>', {
                         'src': url
@@ -61,7 +61,7 @@
         loadVideo: function (i) {
             var _this = i,
                 baseUrl = 'https://www.youtube.com/embed/',
-                videoId = _this.attr('data'),
+                videoId = _this.attr('data-video-id'),
                 params = $.param(this.settings.parameters),
                 url = baseUrl + videoId + '?' + params,
                 code = $('<iframe />', {

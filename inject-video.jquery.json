@@ -1,7 +1,7 @@
 {
 	"name": "inject-video",
 	"title": "Inject Video",
-	"description": "jQuery plugin that replaces a placeholder image with YouTube video.",
+	"description": "jQuery plugin that replaces a placeholder image with embeded YouTube video.",
 	"keywords": [
 		"jquery",
 		"performance",
