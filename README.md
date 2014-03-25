@@ -12,7 +12,7 @@ jQuery plugin that replaces a placeholder image with embeded YouTube video.
     <span class="play-button"></span>
   </div>
 </div>
-'''
+```
 
 Before the closing `</body>` tag, include a link to jQuery and the plugin, and instantiate it.
 
@@ -27,7 +27,7 @@ Before the closing `</body>` tag, include a link to jQuery and the plugin, and i
       })();
 		</script>
 	</body>
-'''
+```
 
 ### Plugin Options
 
