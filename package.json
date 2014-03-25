@@ -8,12 +8,13 @@
     "url": "https://github.com/rubric77/inject-video.git"
   },
   "homepage": "https://github.com/rubric77/inject-video/",
-  "version": "0.10",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-cli": "~0.1.13",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.3.2"
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-cssmin": "*",
+    "grunt-sync": "*"
   }
 }

@@ -48,10 +48,19 @@ module.exports = function(grunt) {
     cssmin: {
       minify: {
         expand: true,
-        cwd: "src/",
-        src: ["*.css"],
+        cwd: "src/css/",
+        src: ["styles.css"],
         dest: "dist/css/",
         ext: ".min.css"
+      }
+    },
+
+    // Copy images
+    sync: {
+      main: {
+        files: [
+          {cwd: 'src/img', src: ['**'], dest: 'dist/img'}
+        ]
       }
     }
 
@@ -61,6 +70,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
+  grunt.loadNpmTasks("grunt-sync");
 
-	grunt.registerTask("default", ["jshint", "concat", "uglify", "cssmin"]);
+	grunt.registerTask("default", ["jshint", "concat", "uglify", "cssmin", "sync"]);
 };

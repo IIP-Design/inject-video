@@ -19,14 +19,22 @@ Before the closing `</body>` tag, include a link to jQuery and the plugin, and i
 ```html
 ...
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="../src/jquery.inject-video.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="/dist/jquery.inject-video.min.js"></script>
   <script>
     (function () {
       $('.media-container').injectVideo();
     })();
   </script>
 </body>
+```
+
+Link to the css file in the head tag
+
+```html
+  <head>
+    <link rel="stylesheet" href="/dist/css/styles.min.css">
+  </head>
 ```
 
 ### Plugin Options

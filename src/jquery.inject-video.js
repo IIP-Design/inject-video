@@ -70,7 +70,7 @@
             var _this = this;
 
             _this.$videos.each(function (i) {
-                var baseUrl = 'http://img.youtube.com/vi/',
+                var baseUrl = '//img.youtube.com/vi/',
                     videoId = $(this).attr('data-video-id'),
                     altText = $(this).attr('data-placeholder-alt'),
                     url = baseUrl + videoId + '/' + _this.settings.thumbQuality,
@@ -85,7 +85,7 @@
 
         loadVideo: function (i) {
             var _this = i,
-                baseUrl = 'https://www.youtube.com/embed/',
+                baseUrl = '//www.youtube.com/embed/',
                 videoId = _this.attr('data-video-id'),
                 params = $.param(this.settings.parameters),
                 url = baseUrl + videoId + '?' + params,
